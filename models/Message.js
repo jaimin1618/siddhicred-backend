@@ -1,12 +1,16 @@
 const mongoose = require("mongoose");
 
-const UserSchema = mongoose.Schema(
+const MessageSchema = mongoose.Schema(
   {
     email: {
       type: String,
       required: true,
     },
-    hashedPassword: {
+    name: {
+      type: String,
+      required: true,
+    },
+    body: {
       type: String,
       required: true,
     },
@@ -16,4 +20,4 @@ const UserSchema = mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("User", UserSchema);
+module.exports = mongoose.model("Message", MessageSchema);

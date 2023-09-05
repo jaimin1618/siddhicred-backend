@@ -100,3 +100,5 @@ httpServer.listen(HTTP_PORT, () => console.log("http server started!"));
 //     );
 //   else console.log("Server started!");
 // }); // for production use
+
+module.exports = httpServer;
