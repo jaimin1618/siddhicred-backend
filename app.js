@@ -73,7 +73,7 @@ app.use("/public", express.static(path.join(__dirname, "public")));
 /*==============================
 create http (development) server instance
 ==============================*/
-const httpServer = http.createServer(app);
+// const httpServer = http.createServer(app);
 
 /*==============================
 create https (production) server instance
@@ -90,7 +90,7 @@ create https (production) server instance
 /*==============================
 start server listen
 ==============================*/
-httpServer.listen(HTTP_PORT, () => console.log("http server started!"));
+// httpServer.listen(HTTP_PORT, () => console.log("http server started!"));
 // httpsServer.listen(HTTPS_PORT, SERVER_DOMAIN, async () => {
 //   if (process.env.ENVIRONMENT === "development")
 //     console.log(
@@ -101,4 +101,7 @@ httpServer.listen(HTTP_PORT, () => console.log("http server started!"));
 //   else console.log("Server started!");
 // }); // for production use
 
-module.exports = httpServer;
+// module.exports = httpServer;
+
+app.listen(8000);
+module.exports = app;
