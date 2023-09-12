@@ -52,7 +52,7 @@ app.use(logger("combined", ErrorLogger)); // only log 4XX and 5XX in file
 app.use(helmet());
 app.use(xss());
 app.use(rateLimiter);
-app.use(cors(constants.corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
